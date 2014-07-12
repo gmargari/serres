@@ -58,8 +58,7 @@ void printMatch() {
                     printf("%s%s%c%s", KBLD, KMAG, array[i][j], KNRM);  // Print rest path letters with magenta
                 }
             } else {
-                //printf("%c", array[i][j]);  // Print non-matching letters
-                printf("%s%c%s", KWHT, array[i][j], KNRM);  // Print rest path letters with magenta
+                printf("%s%c%s", KWHT, array[i][j], KNRM);  // Print rest path letters with light gray
             }
         }
         printf("\n");
@@ -80,10 +79,10 @@ void checkNext(int x, int y, int pathlen) {
             return;
         }
 
-        checkNext(x - 1,   y  , pathlen);
-        checkNext(  x  , y - 1, pathlen);
-        checkNext(  x  , y + 1, pathlen);
-        checkNext(x + 1,   y  , pathlen);
+        checkNext(x - 1, y, pathlen);
+        checkNext(x, y - 1, pathlen);
+        checkNext(x, y + 1, pathlen);
+        checkNext(x + 1, y, pathlen);
     }
 }
 
