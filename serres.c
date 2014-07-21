@@ -15,11 +15,10 @@ char *array[] = {
     "   SERRES",
     "  SERRES ",
     " SERRES  ",
-    "SERRES   ",
-    "   ES    ",
-    "   S     "
+    "    ES   ",
+    "    S    "
 };
-#define ROWS 8
+#define ROWS 7
 #define COLS 9
 char const *target = "SERRES";
 
@@ -58,7 +57,7 @@ void printMatch() {
                     printf("%s%s%c%s", KBLD, KMAG, array[i][j], KNRM);  // Print rest path letters with magenta
                 }
             } else {
-                printf("%s%c%s", KWHT, array[i][j], KNRM);  // Print rest path letters with light gray
+                printf("%s%c%s", KWHT, array[i][j], KNRM);  // Print rest letters with light gray
             }
         }
         printf("\n");
